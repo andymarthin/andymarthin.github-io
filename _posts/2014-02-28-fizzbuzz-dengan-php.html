@@ -1,0 +1,44 @@
+---
+layout: post
+title: FizzBuzz Dengan PHP
+date: 2014-02-28 03:10:46.000000000 +08:00
+categories:
+- PHP
+tags:
+- PHP
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+author:
+  login: thinz
+  email: wp@marthin.web.id
+  display_name: Andy Marthin
+  first_name: Andy
+  last_name: Marthin
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>FizzBuzz adalah permainan yang telah mendapatkan popularitas sebagai tugas pemrograman untuk menyingkirkan non-programmer selama wawancara kerja. Tujuan dari penugasan kurang tentang pemecahan dengan benar sesuai dengan aturan di bawah ini dan lebih lanjut tentang menampilkan programmer memahami dasar, alat yang diperlukan seperti if-/else-statements dan loop. Aturan FizzBuzz adalah sebagai berikut:</p>
+<p>Untuk angka 1 sampai 100,</p>
+<p><!--more--></p>
+<p>jika nomor tersebut habis dibagi 3 print Fizz;<br />
+jika nomor tersebut habis dibagi 5 print Buzz;<br />
+jika nomor tersebut habis dibagi 3 dan 5 (15) print FizzBuzz;<br />
+lain, mencetak nomor tersebut.</p>
+<p>&nbsp;</p>
+<pre class="lang:php decode:true">&lt;?php 
+	for ($i=1; $i &lt;= 100 ; $i++) { 
+		if (!($i % 15)) {
+			echo "FizzBuzz &lt;br&gt;";
+		}elseif (!($i % 5)) {
+			echo "Buzz &lt;br&gt;";
+		}elseif (!($i % 3)) {
+			echo "Fizz&lt;br&gt;";
+		}else{
+			echo $i."&lt;br&gt;";
+		}
+	}
+ ?&gt;</pre>
+<p>:Yb</p>

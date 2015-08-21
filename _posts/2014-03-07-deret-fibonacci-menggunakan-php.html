@@ -1,0 +1,36 @@
+---
+layout: post
+title: Deret Fibonacci Menggunakan PHP
+date: 2014-03-07 15:01:08.000000000 +08:00
+categories:
+- PHP
+tags:
+- Algoritma
+- PHP
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+author:
+  login: thinz
+  email: wp@marthin.web.id
+  display_name: Andy Marthin
+  first_name: Andy
+  last_name: Marthin
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>Deret Fibonacci ditemukan oleh Leonardi Pisano atau lebih dikenal dengan sebutan Leonardo Fibonacci (diturunkan dari Filius Bonaccio atau anak dari Bonaccio, sebutan bagi ayahnya yang bernama asli Guglielmo), pada abad 12 di Italia. Pada dasarnya deret fibonacci merupakan barisan bilangan sederhana dimulai dari 0 dan 1 dan suku <!--more-->berikutnya merupakan jumlah dua bilangan sebelumnya. Deret fibonacci bersifat<em>rekursif</em> karena menggunakan suku dalam deret tersebut untuk menghitung suku setelahnya. dibawah ini saya membuat script deret fibonacci mengunakan php</p>
+<p>&nbsp;</p>
+<pre class="lang:php decode:true">&lt;?php
+	$a = 0;
+	$b = 1;
+	for ($i; $i&lt;= 20; $i++){
+		$c = $a + $b;
+		$a = $b;
+		$b = $c;
+		echo "$c &lt;br&gt;";
+	}
+?&gt;</pre>
+<p>:Yb</p>

@@ -1,0 +1,40 @@
+---
+layout: post
+title: Segitiga Sama Sisi Mengunakan Java
+date: 2014-04-09 23:45:00.000000000 +08:00
+categories:
+- Java
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _wpas_done_all: '1'
+author:
+  login: thinz
+  email: wp@marthin.web.id
+  display_name: Andy Marthin
+  first_name: Andy
+  last_name: Marthin
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>Segitiga sama sisi mengunkan loop for di java</p>
+<pre class="theme:neon lang:java decode:true" title="Segitiga.java">public class Segitiga{
+	public static void main(String[] args) {
+		int n = 10;
+		for (int i = 1;i&lt;=n ;i++) {
+			for (int j = n;j &gt; i ;j-- ) {
+				System.out.print(" ");
+			}
+			for (int k = 1;k &lt;= i ;k++ ) {
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
+		System.out.println();
+	}
+}</pre>
+<p><!--more--><br />
+<img class="alignnone size-full wp-image-97" alt="Screenshot from 2014-04-09 23:36:47" src="/assets/Screenshot-from-2014-04-09-233647.png" width="675" height="436" /></p>

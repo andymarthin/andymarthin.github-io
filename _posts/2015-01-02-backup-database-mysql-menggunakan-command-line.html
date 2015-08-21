@@ -1,0 +1,22 @@
+---
+layout: post
+title: Backup database mysql menggunakan command line
+subtitle:   "Adakalanya ketika server kita mengalami masalah seperti phpmyadmin error. ini terjadi beberapa minggu yang lalu, bukan server si tapi "
+date:       2015-01-02 12:00:00
+author:     "Andy Marthin"
+header-img: "img/mysql.png"
+---
+<p>Adakalanya ketika server kita mengalami masalah seperti phpmyadmin error. ini terjadi beberapa minggu yang lalu, bukan server si tapi lebih tepatnya dilaptop gw karena gw gk mengunakan XAMPP/LAMPP tapi menginstall manual semua. ketika selesai oprek laptop gw kebetulan disini gw mengunakan linux dengan distro ubuntu 14.04, saat lagi mau coding gw coba buka phpmyadmin untuk membuat database. wah tiba-tiba error phpmyadminnya gk mau kebuka, langsung aja coba buka mysql melalui terminal, syukur masih bisa dibuka. Kemudian gw coba untuk memperbaiki phpmyadmin sampe muter-muter google gk dapet juga, terpaksa gw ambil jalan terakhir untuk reinstall phpmyadmin, seteleah gw reinstall wah ternyata sama aja makin pusing lah gw, terakhir gw mencoba untuk reinstall apache,mysql,php,phpmysql. tapi gw mencoba untuk melakukan backup terlebih dahulu databasenya ( soalnya ada skripsi gw disitu ) akhirnya gw memutuskan untuk mencari cara untuk melakukan backup mysql mengunakna timeline, karena gw orangnya ganteng dan gk sombong jadi gw bagiin disini aja hehehehe...<!--more--></p>
+<p>Jika kamu mau melakukan backup hanya 1 database</p>
+<pre class="lang:sh decode:true">mysqldump database_name &gt; database_name.sql</pre>
+<p>backup lebih dari 1 database</p>
+<pre class="lang:sh decode:true ">mysqldump --databases database_one database_two &gt; two_databases.sql</pre>
+<p>backup semua database yang ada</p>
+<pre class="lang:sh decode:true">mysqldump --all-databases &gt; all_databases.sql</pre>
+<p><strong> RESTORE DATABASE</strong></p>
+<p>kamu bisa mengembalikan database yang telah dibackup mengunakan perintah dibawah ini</p>
+<pre class="lang:sh decode:true">mysql database_name &lt; database_name.sql</pre>
+<p>jika kamu ingin mengembalikan database dari cara backup semua database yang ada</p>
+<pre class="lang:sh decode:true">mysql --one-database database_name &lt; all_databases.sql</pre>
+<p>Sekian dulu dari gw, Semoga Membantu</p>
+<p>:Yb</p>

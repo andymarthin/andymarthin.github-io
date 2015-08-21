@@ -1,0 +1,53 @@
+---
+layout: post
+title: Looping dengan Java
+date: 2014-04-04 22:49:01.000000000 +08:00
+categories:
+- Java
+tags:
+- Java
+status: publish
+type: post
+published: true
+meta:
+  _wpas_done_all: '1'
+  _edit_last: '1'
+author:
+  login: thinz
+  email: wp@marthin.web.id
+  display_name: Andy Marthin
+  first_name: Andy
+  last_name: Marthin
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>Perulangan data atau yang biasa disebut dengan “looping” adalah proses yang dilakukan secara berulang-ulang sampai batas yang ditentukan. Biasanya bila dalam perulangan tersebut tidak disertakan batasnya maka syntax akan error karena proses itu akan berulang terus hingga tak terhingga sementara variabel dalam komputer masih terbatas.</p>
+<p><strong>For :</strong></p>
+<pre class="lang:java decode:true" title="belajarLoopFor.java">public class belajarLoopFor {
+	public static void main(String[] args) {
+		for (int i = 1;i&lt;= 20 ; i++ ) {
+			System.out.println(i);
+		}
+	}
+}</pre>
+<p><strong> <!--more-->While : </strong></p>
+<pre class="lang:java decode:true" title="belajarLoopWhile">public class belajarLoopWhile {
+	public static void main(String[] args) {
+		int i = 1;
+		while ( i &lt;= 20) {
+			System.out.println(i);
+			i++;
+		}
+	}
+}</pre>
+<p><strong>Do While</strong></p>
+<pre class="lang:default decode:true" title="belajarLoopDoWhile.java">public class belajarLoopDoWhile {
+	public static void main(String[] args) {
+		int i = 1;
+
+		do{
+			System.out.println(i);
+			i++;
+		}while (i&lt;=20);
+	}
+}</pre>

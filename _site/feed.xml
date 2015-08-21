@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Marthin Blogs</title>
+    <description>Write your site description here. It will be used as your sites meta description as well!</description>
+    <link>http://blog.marthin.web.id/</link>
+    <atom:link href="http://blog.marthin.web.id/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sat, 22 Aug 2015 04:15:41 +0800</pubDate>
+    <lastBuildDate>Sat, 22 Aug 2015 04:15:41 +0800</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Backup database mysql menggunakan command line</title>
+        <description>&lt;p&gt;Adakalanya ketika server kita mengalami masalah seperti phpmyadmin error. ini terjadi beberapa minggu yang lalu, bukan server si tapi lebih tepatnya dilaptop gw karena gw gk mengunakan XAMPP/LAMPP tapi menginstall manual semua. ketika selesai oprek laptop gw kebetulan disini gw mengunakan linux dengan distro ubuntu 14.04, saat lagi mau coding gw coba buka phpmyadmin untuk membuat database. wah tiba-tiba error phpmyadminnya gk mau kebuka, langsung aja coba buka mysql melalui terminal, syukur masih bisa dibuka. Kemudian gw coba untuk memperbaiki phpmyadmin sampe muter-muter google gk dapet juga, terpaksa gw ambil jalan terakhir untuk reinstall phpmyadmin, seteleah gw reinstall wah ternyata sama aja makin pusing lah gw, terakhir gw mencoba untuk reinstall apache,mysql,php,phpmysql. tapi gw mencoba untuk melakukan backup terlebih dahulu databasenya ( soalnya ada skripsi gw disitu ) akhirnya gw memutuskan untuk mencari cara untuk melakukan backup mysql mengunakna timeline, karena gw orangnya ganteng dan gk sombong jadi gw bagiin disini aja hehehehe...&lt;!--more--&gt;&lt;/p&gt;
+&lt;p&gt;Jika kamu mau melakukan backup hanya 1 database&lt;/p&gt;
+&lt;pre class=&quot;lang:sh decode:true&quot;&gt;mysqldump database_name &amp;gt; database_name.sql&lt;/pre&gt;
+&lt;p&gt;backup lebih dari 1 database&lt;/p&gt;
+&lt;pre class=&quot;lang:sh decode:true &quot;&gt;mysqldump --databases database_one database_two &amp;gt; two_databases.sql&lt;/pre&gt;
+&lt;p&gt;backup semua database yang ada&lt;/p&gt;
+&lt;pre class=&quot;lang:sh decode:true&quot;&gt;mysqldump --all-databases &amp;gt; all_databases.sql&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt; RESTORE DATABASE&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;kamu bisa mengembalikan database yang telah dibackup mengunakan perintah dibawah ini&lt;/p&gt;
+&lt;pre class=&quot;lang:sh decode:true&quot;&gt;mysql database_name &amp;lt; database_name.sql&lt;/pre&gt;
+&lt;p&gt;jika kamu ingin mengembalikan database dari cara backup semua database yang ada&lt;/p&gt;
+&lt;pre class=&quot;lang:sh decode:true&quot;&gt;mysql --one-database database_name &amp;lt; all_databases.sql&lt;/pre&gt;
+&lt;p&gt;Sekian dulu dari gw, Semoga Membantu&lt;/p&gt;
+&lt;p&gt;:Yb&lt;/p&gt;
+</description>
+        <pubDate>Fri, 02 Jan 2015 20:00:00 +0800</pubDate>
+        <link>http://blog.marthin.web.id/2015/01/02/backup-database-mysql-menggunakan-command-line/</link>
+        <guid isPermaLink="true">http://blog.marthin.web.id/2015/01/02/backup-database-mysql-menggunakan-command-line/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Secure Copy (SCP) Pada Linux</title>
+        <description>&lt;p&gt;Secure Copy Protocol (SCP) adalah sebuah tool yang sangat berguna dalam mengirim dan menerima file melalui Secure Shell (SSH) di internet tanpa (atau dengan sedikit) resiko jalur kita terdeteksi oleh pihak lain. &lt;span style=&quot;color: #000000;&quot;&gt;Dengan scp file yang akan disalin dikirimkan dalam bentuk chiper text (data yang dienkripsi). &lt;/span&gt;Berikut adalah cara menggunakan SCP untuk mengirim file dan menerima file.&lt;!--more--&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;color: #000000;&quot;&gt;Untuk melakukan penyalinan file/folder dari remote sistem ke lokal sistem dapat digunakan perintah :&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mengambil File/Folder&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;lang:sh decode:true&quot;&gt;scp -r root@192.168.1.27:/var/www/project1 /var/www
+&lt;/pre&gt;
+&lt;p&gt;Mengambil folder project1 dari remote folder /var/www yang ada pada IP 192.168.1.27 kedalam local directory /var/www&lt;/p&gt;
+&lt;p&gt;#  -r  digunakan bila kita akan mengirimkan sebuah folder, maka parameter “-r” akan dibutuhkan agar seluruh isi folder tersebut, termasuk file dan sub-folder juga ikut dicopy&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mengirim File/Folder&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;lang:sh decode:true&quot;&gt;scp Document1.txt root@192.168.1.27:/backup&lt;/pre&gt;
+&lt;p&gt;Mengirim file Document1.txt dari local directory ke remote folder sistem /backup yang ada pada IP 192.168.1.27&lt;/p&gt;
+</description>
+        <pubDate>Wed, 06 Aug 2014 04:06:37 +0800</pubDate>
+        <link>http://blog.marthin.web.id/linux/2014/08/06/secure-copy-scp-pada-linux/</link>
+        <guid isPermaLink="true">http://blog.marthin.web.id/linux/2014/08/06/secure-copy-scp-pada-linux/</guid>
+        
+        <category>Linux</category>
+        
+        
+        <category>linux</category>
+        
+      </item>
+    
+      <item>
+        <title>The dreams of yesterday are the hopes of today and the reality of tomorrow.</title>
+        <description>&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman&#39;s earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
+
+&lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there&#39;s no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
+
+&lt;p&gt;What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.&lt;/p&gt;
+
+&lt;p&gt;A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That&#39;s how I felt seeing the Earth for the first time. I could not help but love and cherish her.&lt;/p&gt;
+
+&lt;p&gt;For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.&lt;/p&gt;
+
+&lt;h2 class=&quot;section-heading&quot;&gt;The Final Frontier&lt;/h2&gt;
+
+&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
+
+&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
+
+&lt;blockquote&gt;The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.&lt;/blockquote&gt;
+
+&lt;p&gt;Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.&lt;/p&gt;
+
+&lt;h2 class=&quot;section-heading&quot;&gt;Reaching for the Stars&lt;/h2&gt;
+
+&lt;p&gt;As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;#&quot;&gt;
+    &lt;img src=&quot;/img/post-sample-image.jpg&quot; alt=&quot;Post Sample Image&quot; /&gt;
+&lt;/a&gt;
+&lt;span class=&quot;caption text-muted&quot;&gt;To go places and do things that have never been done before – that’s what living is all about.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.&lt;/p&gt;
+
+&lt;p&gt;As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.&lt;/p&gt;
+
+&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://www.flickr.com/photos/nasacommons/&quot;&gt;NASA on The Commons&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 01 Jul 2014 20:00:00 +0800</pubDate>
+        <link>http://blog.marthin.web.id/2014/07/01/dreams/</link>
+        <guid isPermaLink="true">http://blog.marthin.web.id/2014/07/01/dreams/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Dinosaurs are extinct today</title>
+        <description>&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman&#39;s earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
+
+&lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there&#39;s no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
+
+&lt;p&gt;What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.&lt;/p&gt;
+
+&lt;p&gt;A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That&#39;s how I felt seeing the Earth for the first time. I could not help but love and cherish her.&lt;/p&gt;
+
+&lt;p&gt;For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.&lt;/p&gt;
+
+&lt;h2 class=&quot;section-heading&quot;&gt;The Final Frontier&lt;/h2&gt;
+
+&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
+
+&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
+
+&lt;blockquote&gt;The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.&lt;/blockquote&gt;
+
+&lt;p&gt;Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.&lt;/p&gt;
+
+&lt;h2 class=&quot;section-heading&quot;&gt;Reaching for the Stars&lt;/h2&gt;
+
+&lt;p&gt;As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;#&quot;&gt;
+    &lt;img src=&quot;/img/post-sample-image.jpg&quot; alt=&quot;Post Sample Image&quot; /&gt;
+&lt;/a&gt;
+&lt;span class=&quot;caption text-muted&quot;&gt;To go places and do things that have never been done before – that’s what living is all about.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.&lt;/p&gt;
+
+&lt;p&gt;As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.&lt;/p&gt;
+
+&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://www.flickr.com/photos/nasacommons/&quot;&gt;NASA on The Commons&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 10 Jun 2014 20:00:00 +0800</pubDate>
+        <link>http://blog.marthin.web.id/2014/06/10/dinosaurs/</link>
+        <guid isPermaLink="true">http://blog.marthin.web.id/2014/06/10/dinosaurs/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Mengaktifkan SSH (Secure Shell) di ubuntu 12.04 Desktop</title>
+        <description>&lt;p&gt;Seperti yang Anda mungkin sudah tahu, SSH adalah sebuah protokol komunikasi yang aman yang memungkinkan Anda dari jarak jauh mengakses komputer jaringan. Hal ini dikenal sebagai pengganti Telnet yang sangat tidak aman. Sementara Telnet mengirimkan lalu lintas dalam teks biasa, SSH di sisi lain menggunakan protokol yang aman untuk berkomunikasi.&lt;/p&gt;
+&lt;p&gt;Buka Terminal, Tekan  CTRL + ALT + T untuk membuka terminal kemudian jalankan perintah di bawah ini untuk menginstall SSH Server.&lt;/p&gt;
+&lt;p&gt;&lt;!--more--&gt;&lt;/p&gt;
+&lt;pre class=&quot;theme:neon font:ubuntu-mono lang:sh decode:true&quot;&gt;sudo apt-get install openssh-server&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.marthin.web.id/wp-content/uploads/2014/04/Screenshot-from-2014-04-12-030407.png&quot;&gt;&lt;img class=&quot;alignnone size-full wp-image-103&quot; alt=&quot;Screenshot from 2014-04-12 03:04:07&quot; src=&quot;assets/Screenshot-from-2014-04-12-030407.png&quot; width=&quot;660&quot; height=&quot;120&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Itu saja! Gunakan SSH clients Anda untuk terhubung ke mesin anda menggunakan port default 22. Jika Anda ingin mengubah port koneksi, jalankan perintah di bawah ini untuk membuka file konfigurasi.&lt;/p&gt;
+&lt;pre class=&quot;lang:sh decode:true&quot;&gt;sudo gedit /etc/ssh/sshd_config&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.marthin.web.id/wp-content/uploads/2014/04/Screenshot-from-2014-04-12-031201.png&quot;&gt;&lt;img class=&quot;alignnone size-full wp-image-104&quot; alt=&quot;Screenshot from 2014-04-12 03:12:01&quot; src=&quot;assets/Screenshot-from-2014-04-12-031201.png&quot; width=&quot;662&quot; height=&quot;140&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Kemudian mengubah port # terbukti apa pun yang Anda inginkan dan menyimpan file. Tapi ingat untuk menggunakan nomor port yang baru setiap kali Anda ingin terhubung ke sistem Anda melalui SSH&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.marthin.web.id/wp-content/uploads/2014/04/Screenshot-from-2014-04-12-032036.png&quot;&gt;&lt;img class=&quot;alignnone size-full wp-image-106&quot; alt=&quot;Screenshot from 2014-04-12 03:20:36&quot; src=&quot;assets/Screenshot-from-2014-04-12-032036.png&quot; width=&quot;617&quot; height=&quot;237&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;--&lt;/p&gt;
+&lt;p&gt;Test SSH dari Android&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.marthin.web.id/wp-content/uploads/2014/04/Screenshot_2014-04-12-02-56-28.png&quot;&gt;&lt;img class=&quot;alignnone size-full wp-image-102&quot; alt=&quot;Screenshot_2014-04-12-02-56-28&quot; src=&quot;assets/Screenshot_2014-04-12-02-56-28.png&quot; width=&quot;480&quot; height=&quot;800&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;:Yb&lt;/p&gt;
+</description>
+        <pubDate>Sat, 12 Apr 2014 03:24:03 +0800</pubDate>
+        <link>http://blog.marthin.web.id/2014/04/12/mengaktifkan-ssh-secure-shell-di-ubuntu-12-04-desktop/</link>
+        <guid isPermaLink="true">http://blog.marthin.web.id/2014/04/12/mengaktifkan-ssh-secure-shell-di-ubuntu-12-04-desktop/</guid>
+        
+        <category>Linux</category>
+        
+        <category>SSH</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Segitiga Sama Sisi Mengunakan Java</title>
+        <description>&lt;p&gt;Segitiga sama sisi mengunkan loop for di java&lt;/p&gt;
+&lt;pre class=&quot;theme:neon lang:java decode:true&quot; title=&quot;Segitiga.java&quot;&gt;public class Segitiga{
+	public static void main(String[] args) {
+		int n = 10;
+		for (int i = 1;i&amp;lt;=n ;i++) {
+			for (int j = n;j &amp;gt; i ;j-- ) {
+				System.out.print(&quot; &quot;);
+			}
+			for (int k = 1;k &amp;lt;= i ;k++ ) {
+				System.out.print(&quot;* &quot;);
+			}
+			System.out.println();
+		}
+		System.out.println();
+	}
+}&lt;/pre&gt;
+&lt;p&gt;&lt;!--more--&gt;&lt;br /&gt;
+&lt;img class=&quot;alignnone size-full wp-image-97&quot; alt=&quot;Screenshot from 2014-04-09 23:36:47&quot; src=&quot;/assets/Screenshot-from-2014-04-09-233647.png&quot; width=&quot;675&quot; height=&quot;436&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 09 Apr 2014 23:45:00 +0800</pubDate>
+        <link>http://blog.marthin.web.id/java/2014/04/09/segitiga-sama-sisi-mengunakan-java/</link>
+        <guid isPermaLink="true">http://blog.marthin.web.id/java/2014/04/09/segitiga-sama-sisi-mengunakan-java/</guid>
+        
+        
+        <category>java</category>
+        
+      </item>
+    
+      <item>
+        <title>Looping dengan Java</title>
+        <description>&lt;p&gt;Perulangan data atau yang biasa disebut dengan “looping” adalah proses yang dilakukan secara berulang-ulang sampai batas yang ditentukan. Biasanya bila dalam perulangan tersebut tidak disertakan batasnya maka syntax akan error karena proses itu akan berulang terus hingga tak terhingga sementara variabel dalam komputer masih terbatas.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;For :&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;lang:java decode:true&quot; title=&quot;belajarLoopFor.java&quot;&gt;public class belajarLoopFor {
+	public static void main(String[] args) {
+		for (int i = 1;i&amp;lt;= 20 ; i++ ) {
+			System.out.println(i);
+		}
+	}
+}&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt; &lt;!--more--&gt;While : &lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;lang:java decode:true&quot; title=&quot;belajarLoopWhile&quot;&gt;public class belajarLoopWhile {
+	public static void main(String[] args) {
+		int i = 1;
+		while ( i &amp;lt;= 20) {
+			System.out.println(i);
+			i++;
+		}
+	}
+}&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Do While&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;lang:default decode:true&quot; title=&quot;belajarLoopDoWhile.java&quot;&gt;public class belajarLoopDoWhile {
+	public static void main(String[] args) {
+		int i = 1;
+
+		do{
+			System.out.println(i);
+			i++;
+		}while (i&amp;lt;=20);
+	}
+}&lt;/pre&gt;
+</description>
+        <pubDate>Fri, 04 Apr 2014 22:49:01 +0800</pubDate>
+        <link>http://blog.marthin.web.id/java/2014/04/04/looping-dengan-java/</link>
+        <guid isPermaLink="true">http://blog.marthin.web.id/java/2014/04/04/looping-dengan-java/</guid>
+        
+        <category>Java</category>
+        
+        
+        <category>java</category>
+        
+      </item>
+    
+      <item>
+        <title>Kenapa saya belajar java ?</title>
+        <description>&lt;p&gt;Kenapa belajar java?&lt;/p&gt;
+&lt;p&gt;belakangan ini saya lagi belajar pemograman java, sebenarnya pengen belajar ruby tapi gk tau kenapa malah belajar java, dari dulu si emang ada niat mau belajar java tapi ya hanya niat dan tidak dilakukan. selama ini saya fokus di PHP. Di php juga masih newbie, kebetulan lagi pengen belajar konsep Object-oriented programming (OOP) tapi kebanyakan pake java yah uda sekalian aja belajar java.&lt;!--more--&gt;&lt;/p&gt;
+&lt;p&gt;Why?&lt;/p&gt;
+&lt;p&gt;berikut saya jabarkarkan kenapa saya belajar java dan kelebihan java.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Gaji Programmer JAVA gede. Untuk starting pada saat tulisan ini dibuat, gaji fresh graduate JAVA start dari 4jt. Dan untuk gaji programmer JAVA EE yang senior gajinya &amp;gt;10jt. Kalo udah ngomongin duit pasti semangat.&lt;/li&gt;
+&lt;li&gt;JAVA is Multi Platform, jadi  java bisa dijalanin di beberapa OS yang sering dipakai seperti Windows, OSX dan LINUX.&lt;/li&gt;
+&lt;li&gt;JAVA luas cakupannya, bisa develop desktop,web,bahkan mobile.&lt;/li&gt;
+&lt;li&gt;JAVA is OOP. Kalau belajar JAVA, ente bisa sekalian belajar konsep OOP, nanti kalau mau belajar bahasa program lainnya yang pake konsep OOP ga bakal kesusahaan lagi.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;yang bikin seneng saya belajar adalah dia multi platform, kebetulan saya sudah 2 tahun aktif menggunakan Linux jadi walaupun saya develop di linux bisa jalan juga di platform lain. mau develop desktop bisa, mau web? tinggal pake framework Spring, mobile? jangan tanya lagi Android bisa di develop mengukan java walaupun bisa didevelop bahasa lain tapi di internet lebih banyak tutorial develop android mengunakan dan komunitas java itu banyak banget men.&lt;/p&gt;
+&lt;p&gt;oke ini hanya sekedar opini saya, mungkin yang lain punya pendapat lain dan lebih suka bahasa yang lain no problem lah kan ini hanya opini saya sendiri. gk suka gak apa apa sukur sukur jadi motifasi biar belajar java juga hehehehehe&lt;/p&gt;
+&lt;p&gt;:Yb&lt;/p&gt;
+</description>
+        <pubDate>Wed, 12 Mar 2014 15:11:44 +0800</pubDate>
+        <link>http://blog.marthin.web.id/opini/2014/03/12/kenapa-saya-belajar-java/</link>
+        <guid isPermaLink="true">http://blog.marthin.web.id/opini/2014/03/12/kenapa-saya-belajar-java/</guid>
+        
+        <category>Java</category>
+        
+        <category>Opini</category>
+        
+        
+        <category>opini</category>
+        
+      </item>
+    
+      <item>
+        <title>Berkenalan Dengan Java</title>
+        <description>&lt;p&gt;Belakangan ini saya lagi belajar java jadi sekalian aja nulis apa yang lagi sedang saya pelajari hehehe  Pertama tama berkenalan sama si Java. Bahasa Java diciptakan oleh James Gosling, Perancang system di Sun Microsystem Inc. Pada awalnya, James Gosling diberi tugas merancang software untuk berbagai peralatan elektronik berbasis mikroprosessor. Ketika mengunakan bahasa C/C++, ternyata program yang dibuatnya harus selalu dicompile ulang saat mengganti tipe dari chip mikroprosessor. Keadaan tersebut mencetukan ide untuk membuat satu bahasa yang bersifat &quot;Write Once Run Anywhere &quot; (WORA), yaitu bahasa yang memungkinkan program hanya sekali ditulis (compile) dan bisa dijalankan dimana saja pada chip apa pun.&lt;/p&gt;
+&lt;p&gt;pertama yang harus dilakukan adalah menginstall Java Development Kit (JDK) &lt;!--more--&gt;karena disini saya mengukanan ubuntu jadi disini saya tulis cara install JDK pada ubuntu bagi pengguna windows bisa cari caranya di google.&lt;/p&gt;
+&lt;pre class=&quot;lang:sh decode:true&quot;&gt;sudo apt-get install openjdk-7-jdk&lt;/pre&gt;
+&lt;p&gt;setelah melakukan penginstallan JDK sekarang kita bisa memulai coding java. Seperti biasa saat baru mempelajadi suatu bahasa pemograman yang biasa saya lakukan ada membuat kalimat Hello Word terlebih dahulu&lt;/p&gt;
+&lt;p&gt;buatlah sebuah folder kosong untuk menyimpan file .java yang akan kita buat. misalnya /home/user/belajar-java setelah itu buka text editor kemuadian tulis kode berikut ini:&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;pre class=&quot;lang:java decode:true&quot;&gt;public class HelloWorld{
+	public static void main(String[] args){
+		System.out.println(&quot;HelloWorld!&quot;);
+	}
+}&lt;/pre&gt;
+&lt;p&gt;Simpan dengan nama HelloWorld.java, ingat nama class harus sama persis dengan nama file jadi kalau nama classnya HelloWorld maka nama filenya harus bernama HelloWorld.java. setelah disimpan compile&lt;br /&gt;
+file HelloWorld.java dengan Javac. Jangan lupa untuk memastikan sekarang berada di dalam folder yang sama dengan folder yang digunakan untuk menyimpan fle HelloWorld.java tersebut.&lt;/p&gt;
+&lt;pre class=&quot;lang:sh decode:true&quot;&gt;$ javac HelloWorld.java&lt;/pre&gt;
+&lt;p&gt;Kalau proses kompilasi berjalan dengan baik, maka tidak ada pesan sama sekali dan di folder yang sama akan dibuat fle HelloWorld.class, setelah kompilasi selesai sekarang kita jalankan class HelloWorld.&lt;/p&gt;
+&lt;pre class=&quot;lang:sh decode:true&quot;&gt;$ java HelloWorld&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.marthin.web.id/wp-content/uploads/2014/03/Screenshot-from-2014-03-07-153616.png&quot;&gt;&lt;img class=&quot;alignnone size-medium wp-image-74&quot; alt=&quot;Screenshot from 2014-03-07 15:36:16&quot; src=&quot;assets/Screenshot-from-2014-03-07-153616-300x89.png&quot; width=&quot;300&quot; height=&quot;89&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 07 Mar 2014 15:37:45 +0800</pubDate>
+        <link>http://blog.marthin.web.id/java/2014/03/07/berkenalan-dengan-java/</link>
+        <guid isPermaLink="true">http://blog.marthin.web.id/java/2014/03/07/berkenalan-dengan-java/</guid>
+        
+        <category>Java</category>
+        
+        
+        <category>java</category>
+        
+      </item>
+    
+      <item>
+        <title>Deret Fibonacci Menggunakan PHP</title>
+        <description>&lt;p&gt;Deret Fibonacci ditemukan oleh Leonardi Pisano atau lebih dikenal dengan sebutan Leonardo Fibonacci (diturunkan dari Filius Bonaccio atau anak dari Bonaccio, sebutan bagi ayahnya yang bernama asli Guglielmo), pada abad 12 di Italia. Pada dasarnya deret fibonacci merupakan barisan bilangan sederhana dimulai dari 0 dan 1 dan suku &lt;!--more--&gt;berikutnya merupakan jumlah dua bilangan sebelumnya. Deret fibonacci bersifat&lt;em&gt;rekursif&lt;/em&gt; karena menggunakan suku dalam deret tersebut untuk menghitung suku setelahnya. dibawah ini saya membuat script deret fibonacci mengunakan php&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;pre class=&quot;lang:php decode:true&quot;&gt;&amp;lt;?php
+	$a = 0;
+	$b = 1;
+	for ($i; $i&amp;lt;= 20; $i++){
+		$c = $a + $b;
+		$a = $b;
+		$b = $c;
+		echo &quot;$c &amp;lt;br&amp;gt;&quot;;
+	}
+?&amp;gt;&lt;/pre&gt;
+&lt;p&gt;:Yb&lt;/p&gt;
+</description>
+        <pubDate>Fri, 07 Mar 2014 15:01:08 +0800</pubDate>
+        <link>http://blog.marthin.web.id/php/2014/03/07/deret-fibonacci-menggunakan-php/</link>
+        <guid isPermaLink="true">http://blog.marthin.web.id/php/2014/03/07/deret-fibonacci-menggunakan-php/</guid>
+        
+        <category>Algoritma</category>
+        
+        <category>PHP</category>
+        
+        
+        <category>php</category>
+        
+      </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,35 @@
+---
+layout: post
+title: Secure Copy (SCP) Pada Linux
+date: 2014-08-06 04:06:37.000000000 +08:00
+categories:
+- Linux
+tags:
+- Linux
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _wpas_done_all: '1'
+  _eg_gallery_data: a:2:{s:2:"id";i:113;s:6:"config";a:9:{s:7:"columns";s:1:"1";s:6:"gutter";i:10;s:6:"margin";i:10;s:4:"crop";i:0;s:10:"crop_width";i:960;s:11:"crop_height";i:300;s:7:"classes";a:1:{i:0;s:0:"";}s:5:"title";s:0:"";s:4:"slug";s:0:"";}}
+author:
+  login: thinz
+  email: wp@marthin.web.id
+  display_name: Andy Marthin
+  first_name: Andy
+  last_name: Marthin
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>Secure Copy Protocol (SCP) adalah sebuah tool yang sangat berguna dalam mengirim dan menerima file melalui Secure Shell (SSH) di internet tanpa (atau dengan sedikit) resiko jalur kita terdeteksi oleh pihak lain. <span style="color: #000000;">Dengan scp file yang akan disalin dikirimkan dalam bentuk chiper text (data yang dienkripsi). </span>Berikut adalah cara menggunakan SCP untuk mengirim file dan menerima file.<!--more--></p>
+<p><span style="color: #000000;">Untuk melakukan penyalinan file/folder dari remote sistem ke lokal sistem dapat digunakan perintah :</span></p>
+<p><strong>Mengambil File/Folder</strong></p>
+<pre class="lang:sh decode:true">scp -r root@192.168.1.27:/var/www/project1 /var/www
+</pre>
+<p>Mengambil folder project1 dari remote folder /var/www yang ada pada IP 192.168.1.27 kedalam local directory /var/www</p>
+<p>#  -r  digunakan bila kita akan mengirimkan sebuah folder, maka parameter “-r” akan dibutuhkan agar seluruh isi folder tersebut, termasuk file dan sub-folder juga ikut dicopy</p>
+<p>&nbsp;</p>
+<p><strong>Mengirim File/Folder</strong></p>
+<pre class="lang:sh decode:true">scp Document1.txt root@192.168.1.27:/backup</pre>
+<p>Mengirim file Document1.txt dari local directory ke remote folder sistem /backup yang ada pada IP 192.168.1.27</p>

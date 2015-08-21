@@ -1,0 +1,43 @@
+---
+layout: post
+title: Scan IP Mengunakan nmap
+date: 2014-02-24 21:17:18.000000000 +08:00
+categories:
+- Linux
+tags:
+- Linux
+- nmap
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+author:
+  login: thinz
+  email: wp@marthin.web.id
+  display_name: Andy Marthin
+  first_name: Andy
+  last_name: Marthin
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>nmap adalah scanner powerfull yang tersedia di sistem Unix / Linux. Ini sangat berguna untuk eksplorasi dan audit keamanan jaringan. Ia dirancang untuk secara cepat melakukan scan terhadap jaringan yang besar.</p>
+<p>&nbsp;</p>
+<p>jika nmap belum terinstal pada komputer anda silahkan menginstall nmap terlebih dahulu disini saya mengunakan ubuntu sebagai sistem operasi pada komputer saya. Untuk install nmap sangat mudah tingal mengikuti instruksi terminal di bawah ini</p>
+<p>&nbsp;</p>
+<pre class="lang:sh decode:true">sudo apt-get install nmap</pre>
+<p>untuk melakukan scaning pada ip tingal mengikuti perintah di bawah ini<!--more--></p>
+<p><strong>Scan ip dari 192.168.0.0 - 192.168.0.255</strong></p>
+<pre class="lang:sh decode:true">sudo nmap -sP 192.168.0.0/24</pre>
+<p><strong>Scan IP dari 192.168.0.1 - 192.168.0.254</strong></p>
+<pre class="lang:sh decode:true">sudo nmap -sP 192.168.0.1-254</pre>
+<p><strong>Scan Port dari Port 1 -139</strong></p>
+<pre class="lang:sh decode:true">nmap 192.168.0.1 -p 1-130</pre>
+<p><strong>Scan Sistem Operasi pada IP target</strong></p>
+<pre class="lang:sh decode:true">sudo nmap -O 192.168.0.1</pre>
+<p><strong>Scan Dengan cepat</strong><br />
+jika kamu mau melakukan scan secara cepat tingal menambahkan option -T4 pada nmap</p>
+<pre class="lang:sh decode:true">sudo nmap -A -T4 192.168.0.1</pre>
+<p>jika ingin lebih tau tentang nmap silahkan buka nmap manual</p>
+<pre class="lang:sh decode:true">man nmap</pre>
+<p>&nbsp;</p>
