@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Write your site description here. It will be used as your sites meta description as well!">
 
-    <title>Marthin Blogs</title>
+    <title>Deret Fibonacci Menggunakan PHP - Marthin Blogs</title>
 
-    <link rel="canonical" href="http://blog.marthin.web.id/">
+    <link rel="canonical" href="http://blog.marthin.web.id/2014/03/07/deret-fibonacci-menggunakan-php/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -75,100 +75,61 @@
 </nav>
 
 
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/fibo.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Marthin Blogs</h1>
-                    <hr class="small">
-                    <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
+                <div class="post-heading">
+                    <h1>Deret Fibonacci Menggunakan PHP</h1>
+                    
+                    <span class="meta">Posted by Andy Marthin on March 7, 2014</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			
-<div class="post-preview">
-    <a href="/2015/01/02/backup-database-mysql-menggunakan-command-line/">
-        <h2 class="post-title">            Backup database mysql menggunakan command line
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Adakalanya ketika server kita mengalami masalah seperti phpmyadmin error. ini terjadi beberapa minggu yang lalu, bukan server si tapi 
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by Andy Marthin on January 2, 2015</p>
-</div>
-<hr>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-<div class="post-preview">
-    <a href="/2014/08/06/secure-copy-scp-pada-linux/">
-        <h2 class="post-title">            Secure Copy (SCP) Pada Linux
-        </h2>
-        
-    </a>
-    <p class="post-meta">Posted by Andy Marthin on August 6, 2014</p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2014/07/01/dreams/">
-        <h2 class="post-title">            The dreams of yesterday are the hopes of today and the reality of tomorrow.
-        </h2>
-        
-    </a>
-    <p class="post-meta">Posted by Start Bootstrap on July 1, 2014</p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2014/06/10/dinosaurs/">
-        <h2 class="post-title">            Dinosaurs are extinct today
-        </h2>
-        
-        <h3 class="post-subtitle">
-            because they lacked opposable thumbs and the brainpower to build a space program.
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by Start Bootstrap on June 10, 2014</p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2014/04/12/mengaktifkan-ssh-secure-shell-di-ubuntu-12-04-desktop/">
-        <h2 class="post-title">            Mengaktifkan SSH (Secure Shell) di ubuntu 12.04 Desktop
-        </h2>
-        
-    </a>
-    <p class="post-meta">Posted by Andy Marthin on April 12, 2014</p>
-</div>
-<hr>
+				<p>Deret Fibonacci ditemukan oleh Leonardi Pisano atau lebih dikenal dengan sebutan Leonardo Fibonacci (diturunkan dari Filius Bonaccio atau anak dari Bonaccio, sebutan bagi ayahnya yang bernama asli Guglielmo), pada abad 12 di Italia. Pada dasarnya deret fibonacci merupakan barisan bilangan sederhana dimulai dari 0 dan 1 dan suku <!--more-->berikutnya merupakan jumlah dua bilangan sebelumnya. Deret fibonacci bersifat<em>rekursif</em> karena menggunakan suku dalam deret tersebut untuk menghitung suku setelahnya. dibawah ini saya membuat script deret fibonacci mengunakan php</p>
+<p>&nbsp;</p>
+<pre class="lang:php decode:true">&lt;?php
+	$a = 0;
+	$b = 1;
+	for ($i; $i&lt;= 20; $i++){
+		$c = $a + $b;
+		$a = $b;
+		$b = $c;
+		echo "$c &lt;br&gt;";
+	}
+?&gt;</pre>
+<p>:Yb</p>
 
 
-<!-- Pager -->
+                <hr>
 
-<ul class="pager">
-    
-    
-    <li class="next">
-        <a href="/page2">Older Posts &rarr;</a>
-    </li>
-    
-</ul>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2014/02/28/fizzbuzz-dengan-php/" data-toggle="tooltip" data-placement="top" title="FizzBuzz Dengan PHP">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2014/03/07/berkenalan-dengan-java/" data-toggle="tooltip" data-placement="top" title="Berkenalan Dengan Java">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
 
-
-		</div>
-	</div>
-</div>
+            </div>
+        </div>
+    </div>
+</article>
 
 <hr>
 

@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Write your site description here. It will be used as your sites meta description as well!">
 
-    <title>Marthin Blogs</title>
+    <title>Berkenalan Dengan Java - Marthin Blogs</title>
 
-    <link rel="canonical" href="http://blog.marthin.web.id/">
+    <link rel="canonical" href="http://blog.marthin.web.id/2014/03/07/berkenalan-dengan-java/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -75,100 +75,65 @@
 </nav>
 
 
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/cup_of_java_by_neziak.png')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Marthin Blogs</h1>
-                    <hr class="small">
-                    <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
+                <div class="post-heading">
+                    <h1>Berkenalan Dengan Java</h1>
+                    
+                    <span class="meta">Posted by Andy Marthin on March 7, 2014</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			
-<div class="post-preview">
-    <a href="/2015/01/02/backup-database-mysql-menggunakan-command-line/">
-        <h2 class="post-title">            Backup database mysql menggunakan command line
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Adakalanya ketika server kita mengalami masalah seperti phpmyadmin error. ini terjadi beberapa minggu yang lalu, bukan server si tapi 
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by Andy Marthin on January 2, 2015</p>
-</div>
-<hr>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-<div class="post-preview">
-    <a href="/2014/08/06/secure-copy-scp-pada-linux/">
-        <h2 class="post-title">            Secure Copy (SCP) Pada Linux
-        </h2>
-        
-    </a>
-    <p class="post-meta">Posted by Andy Marthin on August 6, 2014</p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2014/07/01/dreams/">
-        <h2 class="post-title">            The dreams of yesterday are the hopes of today and the reality of tomorrow.
-        </h2>
-        
-    </a>
-    <p class="post-meta">Posted by Start Bootstrap on July 1, 2014</p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2014/06/10/dinosaurs/">
-        <h2 class="post-title">            Dinosaurs are extinct today
-        </h2>
-        
-        <h3 class="post-subtitle">
-            because they lacked opposable thumbs and the brainpower to build a space program.
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by Start Bootstrap on June 10, 2014</p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2014/04/12/mengaktifkan-ssh-secure-shell-di-ubuntu-12-04-desktop/">
-        <h2 class="post-title">            Mengaktifkan SSH (Secure Shell) di ubuntu 12.04 Desktop
-        </h2>
-        
-    </a>
-    <p class="post-meta">Posted by Andy Marthin on April 12, 2014</p>
-</div>
-<hr>
+				<p>Belakangan ini saya lagi belajar java jadi sekalian aja nulis apa yang lagi sedang saya pelajari hehehe  Pertama tama berkenalan sama si Java. Bahasa Java diciptakan oleh James Gosling, Perancang system di Sun Microsystem Inc. Pada awalnya, James Gosling diberi tugas merancang software untuk berbagai peralatan elektronik berbasis mikroprosessor. Ketika mengunakan bahasa C/C++, ternyata program yang dibuatnya harus selalu dicompile ulang saat mengganti tipe dari chip mikroprosessor. Keadaan tersebut mencestukan ide untuk membuat satu bahasa yang bersifat "Write Once Run Anywhere " (WORA), yaitu bahasa yang memungkinkan program hanya sekali ditulis (compile) dan bisa dijalankan dimana saja pada chip apa pun.</p>
+<p>pertama yang harus dilakukan adalah menginstall Java Development Kit (JDK) <!--more-->karena disini saya mengukanan ubuntu jadi disini saya tulis cara install JDK pada ubuntu bagi pengguna windows bisa cari caranya di google.</p>
+<pre class="lang:sh decode:true">sudo apt-get install openjdk-7-jdk</pre>
+<p>setelah melakukan penginstallan JDK sekarang kita bisa memulai coding java. Seperti biasa saat baru mempelajadi suatu bahasa pemograman yang biasa saya lakukan ada membuat kalimat Hello Word terlebih dahulu</p>
+<p>buatlah sebuah folder kosong untuk menyimpan file .java yang akan kita buat. misalnya /home/user/belajar-java setelah itu buka text editor kemuadian tulis kode berikut ini:</p>
+<p>&nbsp;</p>
+<pre class="lang:java decode:true">public class HelloWorld{
+	public static void main(String[] args){
+		System.out.println("HelloWorld!");
+	}
+}</pre>
+<p>Simpan dengan nama HelloWorld.java, ingat nama class harus sama persis dengan nama file jadi kalau nama classnya HelloWorld maka nama filenya harus bernama HelloWorld.java. setelah disimpan compile<br />
+file HelloWorld.java dengan Javac. Jangan lupa untuk memastikan sekarang berada di dalam folder yang sama dengan folder yang digunakan untuk menyimpan fle HelloWorld.java tersebut.</p>
+<pre class="lang:sh decode:true">$ javac HelloWorld.java</pre>
+<p>Kalau proses kompilasi berjalan dengan baik, maka tidak ada pesan sama sekali dan di folder yang sama akan dibuat fle HelloWorld.class, setelah kompilasi selesai sekarang kita jalankan class HelloWorld.</p>
+<pre class="lang:sh decode:true">$ java HelloWorld</pre>
+<p><img class="alignnone size-medium wp-image-74" alt="Screenshot from 2014-03-07 15:36:16" src="/assets/Screenshot-from-2014-03-07-153616-300x89.png" width="300" height="89" /></p>
 
 
-<!-- Pager -->
+                <hr>
 
-<ul class="pager">
-    
-    
-    <li class="next">
-        <a href="/page2">Older Posts &rarr;</a>
-    </li>
-    
-</ul>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2014/03/07/deret-fibonacci-menggunakan-php/" data-toggle="tooltip" data-placement="top" title="Deret Fibonacci Menggunakan PHP">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2014/03/12/kenapa-saya-belajar-java/" data-toggle="tooltip" data-placement="top" title="Kenapa Saya Belajar Java ?">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
 
-
-		</div>
-	</div>
-</div>
+            </div>
+        </div>
+    </div>
+</article>
 
 <hr>
 

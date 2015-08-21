@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Write your site description here. It will be used as your sites meta description as well!">
 
-    <title>Marthin Blogs</title>
+    <title>Scan IP Mengunakan nmap - Marthin Blogs</title>
 
-    <link rel="canonical" href="http://blog.marthin.web.id/">
+    <link rel="canonical" href="http://blog.marthin.web.id/2014/02/24/scan-ip-mengunakan-nmap/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -75,100 +75,64 @@
 </nav>
 
 
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/nmap_logo_vx.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Marthin Blogs</h1>
-                    <hr class="small">
-                    <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
+                <div class="post-heading">
+                    <h1>Scan IP Mengunakan nmap</h1>
+                    
+                    <span class="meta">Posted by Andy Marthin on February 24, 2014</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			
-<div class="post-preview">
-    <a href="/2015/01/02/backup-database-mysql-menggunakan-command-line/">
-        <h2 class="post-title">            Backup database mysql menggunakan command line
-        </h2>
-        
-        <h3 class="post-subtitle">
-            Adakalanya ketika server kita mengalami masalah seperti phpmyadmin error. ini terjadi beberapa minggu yang lalu, bukan server si tapi 
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by Andy Marthin on January 2, 2015</p>
-</div>
-<hr>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-<div class="post-preview">
-    <a href="/2014/08/06/secure-copy-scp-pada-linux/">
-        <h2 class="post-title">            Secure Copy (SCP) Pada Linux
-        </h2>
-        
-    </a>
-    <p class="post-meta">Posted by Andy Marthin on August 6, 2014</p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2014/07/01/dreams/">
-        <h2 class="post-title">            The dreams of yesterday are the hopes of today and the reality of tomorrow.
-        </h2>
-        
-    </a>
-    <p class="post-meta">Posted by Start Bootstrap on July 1, 2014</p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2014/06/10/dinosaurs/">
-        <h2 class="post-title">            Dinosaurs are extinct today
-        </h2>
-        
-        <h3 class="post-subtitle">
-            because they lacked opposable thumbs and the brainpower to build a space program.
-        </h3>
-        
-    </a>
-    <p class="post-meta">Posted by Start Bootstrap on June 10, 2014</p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2014/04/12/mengaktifkan-ssh-secure-shell-di-ubuntu-12-04-desktop/">
-        <h2 class="post-title">            Mengaktifkan SSH (Secure Shell) di ubuntu 12.04 Desktop
-        </h2>
-        
-    </a>
-    <p class="post-meta">Posted by Andy Marthin on April 12, 2014</p>
-</div>
-<hr>
+				<p>nmap adalah scanner powerfull yang tersedia di sistem Unix / Linux. Ini sangat berguna untuk eksplorasi dan audit keamanan jaringan. Ia dirancang untuk secara cepat melakukan scan terhadap jaringan yang besar.</p>
+<p>&nbsp;</p>
+<p>jika nmap belum terinstal pada komputer anda silahkan menginstall nmap terlebih dahulu disini saya mengunakan ubuntu sebagai sistem operasi pada komputer saya. Untuk install nmap sangat mudah tingal mengikuti instruksi terminal di bawah ini</p>
+<p>&nbsp;</p>
+<pre class="lang:sh decode:true">sudo apt-get install nmap</pre>
+<p>untuk melakukan scaning pada ip tingal mengikuti perintah di bawah ini<!--more--></p>
+<p><strong>Scan ip dari 192.168.0.0 - 192.168.0.255</strong></p>
+<pre class="lang:sh decode:true">sudo nmap -sP 192.168.0.0/24</pre>
+<p><strong>Scan IP dari 192.168.0.1 - 192.168.0.254</strong></p>
+<pre class="lang:sh decode:true">sudo nmap -sP 192.168.0.1-254</pre>
+<p><strong>Scan Port dari Port 1 -139</strong></p>
+<pre class="lang:sh decode:true">nmap 192.168.0.1 -p 1-130</pre>
+<p><strong>Scan Sistem Operasi pada IP target</strong></p>
+<pre class="lang:sh decode:true">sudo nmap -O 192.168.0.1</pre>
+<p><strong>Scan Dengan cepat</strong><br />
+jika kamu mau melakukan scan secara cepat tingal menambahkan option -T4 pada nmap</p>
+<pre class="lang:sh decode:true">sudo nmap -A -T4 192.168.0.1</pre>
+<p>jika ingin lebih tau tentang nmap silahkan buka nmap manual</p>
+<pre class="lang:sh decode:true">man nmap</pre>
+<p>&nbsp;</p>
 
 
-<!-- Pager -->
+                <hr>
 
-<ul class="pager">
-    
-    
-    <li class="next">
-        <a href="/page2">Older Posts &rarr;</a>
-    </li>
-    
-</ul>
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2014/02/28/fizzbuzz-dengan-php/" data-toggle="tooltip" data-placement="top" title="FizzBuzz Dengan PHP">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
 
-
-		</div>
-	</div>
-</div>
+            </div>
+        </div>
+    </div>
+</article>
 
 <hr>
 
