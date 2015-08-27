@@ -5,6 +5,7 @@ email: andy@marthin@gmail.com
 description: "Write your site description here. It will be used as your sites meta description as well!"
 baseurl: ""
 url: "http://blog.marthin.web.id"
+author: Andy Marthin
 twitter_username: AndyMarthin
 github_username:  andymarthin
 facebook_username:  andy.christo
@@ -15,4 +16,3 @@ highlighter: pygments
 permalink: pretty
 paginate: 5
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-coments : true
