@@ -4,7 +4,8 @@ header-img: img/home-bg.jpg
 email: andy@marthin@gmail.com
 description: "Andy Marthin Christo Web Developer, Anime Lover, Linux User yang berdomisili di palu. blog ini bertujuan untuk mendokumentasikan kehidupan dan apa yang sedang dipelajari oleh andy marthin christo"
 baseurl: ""
-url: "http://blog.marthin.web.id"
+url: "https://blog.marthin.web.id"
+enforce_ssl: blog.marthin.web.id
 author: Andy Marthin
 twitter_username: AndyMarthin
 github_username:  andymarthin
