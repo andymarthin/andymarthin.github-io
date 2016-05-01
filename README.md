@@ -1,5 +1,8 @@
-#Blog Andy Marthin
-blog ini berisi dibuat untuk mencatat apa yang sedang saya pelajari 
+## Blog Andy Marthin
+
+Blog ini berisi catatan apa yang sedang saya pelajari dan opini
+
+
 ## Notes to self
 
 To update (as explained in the [github docs](https://help.github.com/articles/using-jekyll-with-pages)): `bundle update`
