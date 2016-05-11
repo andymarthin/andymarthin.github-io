@@ -5,14 +5,15 @@ date: 2015-11-14 14:27:00
 author: "Andy Marthin"
 comments:  true
 header-img: "img/angularjsgoogle.png"
-categories: 
+categories:
 - javascript
 ---
 
 Angular.Js merupakan  front-end framework javascript yang dikembangkan oleh Google.
 
 Index.html
-{% highlight html linenos %}
+
+```html
 <!DOCTYPE html>
 <html lang="en" ng-app="emailApp">
 <head>
@@ -38,7 +39,7 @@ Index.html
 	</div>
 </body>
 </html>
-{% endhighlight %}
+```
 
 App.js
 {% highlight javascript linenos %}
