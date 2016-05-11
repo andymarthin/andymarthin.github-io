@@ -9,6 +9,18 @@ To update (as explained in the [github docs](https://help.github.com/articles/us
 
 To add a draft post: just drop a markdown file in `_drafts`
 
+Create your new page using:
+
+    $ bundle exec jekyll page "My New Page"
+
+Create your new post using:
+
+    $ bundle exec jekyll post "My New Post"
+
+Create your new draft using:
+
+    $ bundle exec jekyll draft "My new draft"
+
 To preview locally: `jekyll serve --watch --baseurl `
 
 To preview locally, with drafts: `jekyll serve --watch --drafts --baseurl `
