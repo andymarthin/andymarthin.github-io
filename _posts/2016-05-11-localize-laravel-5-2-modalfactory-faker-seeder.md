@@ -7,7 +7,7 @@ header-img: "img/laravel.jpg"
 ---
 Beberapa waktu yang lalu ketika saya lagi "belajar" laravel, saya merasa kurang puas saat mengunakan faker saat seeder data. karena faker secara default mengukan "en_US" atau standart data amerika seperti nama, alamat, no telp, dll.
 
-ubah /app/Providers/AppServiceProvider.php
+ubah `/app/Providers/AppServiceProvider.php`
 
 ```php
 use Faker\Generator as FakerGenerator;  
@@ -24,7 +24,7 @@ function register( ) {
 ...
 ```
 
-atau
+atau ubah `/database/factories/ModelFactory.php`
 
 ```php
 
