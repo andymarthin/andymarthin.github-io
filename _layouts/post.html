@@ -13,6 +13,7 @@ layout: default
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% endif %}
                     <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: " %-d %B %Y" }} {% if page.categories %} - {{ page.categories }} {% endif %}</span>
+                    <span data-toggle="tooltip" data-placement="top" title="{{ content | strip_html | number_of_words | append:' words'}}"><em><i class="fa fa-clock-o" aria-hidden="true"></i>  {% capture reading_time %}{{ content | strip_html | number_of_words | plus:91 | divided_by:180 }}{% endcapture %}{% if reading_time <= '1' %}{{ 1 | append:' min read' }}{% else %}{{ reading_time | append:' min read' }}{% endif %}</em></span>
                 </div>
             </div>
         </div>

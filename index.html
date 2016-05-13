@@ -14,7 +14,11 @@ description: "Catatan dan Journal Andy Marthin"
         </h3>
         {% endif %}
     </a>
-    <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: " %-d %B %Y" }}</p>
+    <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: " %-d %B %Y" }}
+    <i class="fa fa-clock-o" aria-hidden="true"></i>
+    <span data-toggle="tooltip" data-placement="top" title="{{ post.content | strip_html | number_of_words | append:' words'}}"><b>{% capture reading_time %}{{ post.content | strip_html | number_of_words | plus:91 | divided_by:180 }}{% endcapture %}{% if reading_time <= '1' %}{{ 1 | append:' min read' }}{% else %}{{ reading_time | append:' min read' }}{% endif %}</b></span>
+    </p>
+
     {% if post.content contains '<!--more-->' %}
 
   {{ post.content | split:'<!--more-->' | first }}
