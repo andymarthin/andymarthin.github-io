@@ -11,9 +11,21 @@ twitter_username: AndyMarthin
 github_username:  andymarthin
 facebook_username:  andy.christo
 
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
-permalink: pretty
-paginate: 5
+permalink: /:categories/:title
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems:
+  - jekyll-paginate
+  - jemoji
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-compose
+
+paginate: 5
+
+# Google Analytics
+google_analytics_tracking_id: UA-66860547-1
