@@ -8,7 +8,7 @@ categories:
 - Opini
 ---
 
- Setelah nulis [Localize Laravel 5.2 ModalFactory Faker Seeder](https://blog.marthin.web.id/2016/05/11/localize-laravel-5-2-modalfactory-faker-seeder/), gue baru sadar bahwa postingan terakir gue itu january 2015. artinya gua saat itu jarang belajar, Ok gue akuin emang beberapa bulan terakir ini kalo gue lagi males nulis blog yah apa juga yang mau gue tulis karena emang gk ada yang bisa gue tulis. Tujuan awal gue nulis sebenarnya untuk mendokumentasikan apa yang sedang gue pelajari dan opini gue sekalian belajar nulis. Ada bebrapa faktor yang menyebabkan gue males nulis blog antara lain : gue lagi malas belajar hal baru ,terjebak di ["Comfort Zone"](https://en.wikipedia.org/wiki/Comfort_zone), tidak ada tantangan untuk melakukan hal hal baru, atau mungkin mulai jenuh dengan bidang yang sedang gue tekuni sekarang ini.
+ Setelah nulis [Localize Laravel 5.2 ModalFactory Faker Seeder](https://blog.marthin.web.id/opini/localize-laravel-5-2-modalfactory-faker-seeder/), gue baru sadar bahwa postingan terakir gue itu january 2015. artinya gua saat itu jarang belajar, Ok gue akuin emang beberapa bulan terakir ini kalo gue lagi males nulis blog yah apa juga yang mau gue tulis karena emang gk ada yang bisa gue tulis. Tujuan awal gue nulis sebenarnya untuk mendokumentasikan apa yang sedang gue pelajari dan opini gue sekalian belajar nulis. Ada bebrapa faktor yang menyebabkan gue males nulis blog antara lain : gue lagi malas belajar hal baru ,terjebak di ["Comfort Zone"](https://en.wikipedia.org/wiki/Comfort_zone), tidak ada tantangan untuk melakukan hal hal baru, atau mungkin mulai jenuh dengan bidang yang sedang gue tekuni sekarang ini.
 
 <!--more-->
 
