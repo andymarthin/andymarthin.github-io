@@ -42,6 +42,16 @@
                         </a>
                     </li>
                     {% endif %}
+                    {% if site.email %}
+                    <li>
+                        <a href="mailto:{{ site.email }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
                 </ul>
                 <p class="copyright text-muted">Made With <i class="love fa fa-heart"></i> from Palu</a> {{ site.time | date: '%Y' }}</p>
             </div>
@@ -50,7 +60,7 @@
 </footer>
 
 <!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.2.3.min.js"></script>
+<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
