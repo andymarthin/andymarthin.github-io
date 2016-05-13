@@ -14,7 +14,18 @@ description: "Catatan dan Journal Andy Marthin"
         </h3>
         {% endif %}
     </a>
-    <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
+    <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: " %-d %B %Y" }}</p>
+    {% if post.content contains '<!--more-->' %}
+
+  {{ post.content | split:'<!--more-->' | first }}
+
+  <p><a href="{{ post.url }}">Lanjut membaca ...</a></p>
+
+{% else %}
+
+  {{ post.content }}
+
+{% endif %}
 </div>
 <hr>
 {% endfor %}
