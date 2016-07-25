@@ -1,3 +1,8 @@
+[!Build status](https://travis-ci.org/andymarthin/andymarthin.github.io.svg?branch=master)
+
+![Built With Love](http://forthebadge.com/images/badges/built-with-love.svg)
+
+
 ## Blog Andy Marthin
 
 Blog ini berisi catatan apa yang sedang saya pelajari dan opini
@@ -30,6 +35,10 @@ Publish your draft using [jekyll compose](https://github.com/jekyll/jekyll-compo
 $ bundle exec jekyll publish _drafts/my-new-draft.md
 # or specify a specific date on which to publish it
 $ bundle exec jekyll publish _drafts/my-new-draft.md --date 2014-01-24
+```
+
+```shell
+bundle exec htmlproofer ./_site --disable-external --assume-extension --allow-hash-href --check-html
 ```
 
 To publish: commit locally and `git push`
