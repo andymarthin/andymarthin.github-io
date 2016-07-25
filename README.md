@@ -1,4 +1,4 @@
-[!Build status](https://travis-ci.org/andymarthin/andymarthin.github.io.svg?branch=master)
+![Build status](https://travis-ci.org/andymarthin/andymarthin.github.io.svg?branch=master)
 
 ![Built With Love](http://forthebadge.com/images/badges/built-with-love.svg)
 
