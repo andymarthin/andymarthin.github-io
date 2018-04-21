@@ -18,13 +18,6 @@ highlighter: rouge
 permalink: /:categories/:title
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
-gems:
-  - jekyll-paginate
-  - jemoji
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-compose
-
 paginate: 5
 
 # Google Analytics
